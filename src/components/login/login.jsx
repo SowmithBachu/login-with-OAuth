@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = ({ setIsSignedIn }) => {
     const navigate = useNavigate();
     return (
-        <GoogleOAuthProvider clientId="389661090557-k70ilm04aaaqmvuug2f1oq28o06oc1kt.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}>
             <div className='container' style={{maxWidth: '350px', margin: '50px auto', padding: '20px', border: '1px solid #ccc', borderRadius: '8px', background: '#fff'}}>
                 <h2 style={{textAlign: 'center'}}>Login</h2>
                 <form onSubmit={e => e.preventDefault()}>
